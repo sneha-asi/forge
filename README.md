@@ -73,10 +73,10 @@ Each expert's instructions encode best practices distilled from Anthropic, OpenA
 
 ## Install (from source)
 
-1. **Download Forge:** grab the packaged build from the [latest Release](https://github.com/snehaguptanurix/promptforge/releases/latest) (`forge-v1.0.0.zip`) and unzip it. (Or click **Code -> Download ZIP**, or `git clone https://github.com/snehaguptanurix/promptforge.git`.)
+1. **Download Forge:** grab the packaged build from the [latest Release](https://github.com/sneha-asi/forge/releases/latest) (`forge-v1.0.0.zip`) and unzip it. (Or click **Code -> Download ZIP**, or `git clone https://github.com/sneha-asi/forge.git`.)
 2. Open `chrome://extensions` in Chrome (or Edge / Brave).
 3. Turn on **Developer mode** (top right).
-4. Click **Load unpacked** and select the unzipped `promptforge-extension` folder.
+4. Click **Load unpacked** and select the folder that contains `manifest.json` (the repository root, e.g. the cloned `forge` folder).
 5. Pin Forge from the puzzle-piece menu, open it, and add your own Anthropic API key in Settings.
 
 > It's bring-your-own-key: each person uses their own Anthropic key (stored locally) and pays their own API usage. There are no accounts and no backend.
@@ -114,6 +114,7 @@ The engine is pure (no DOM, no `chrome.*`); the popup loads it via `<script>` an
 
 ```bash
 # regenerate icons (PNG 16 to 128) and the README banner
+pip install Pillow   # make_icons.py and make_banner.py need Pillow
 python3 make_icons.py
 python3 make_banner.py
 
